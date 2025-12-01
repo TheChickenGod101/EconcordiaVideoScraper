@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Extractor</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 12px;
+      color: #0f172a;
+      background: #f8fafc;
+      min-width: 320px;
+    }
+    h1 {
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+    button {
+      background: #0f62fe;
+      border: none;
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    button:hover { background: #0954d4; }
+    button:disabled {
+      background: #cbd5e1;
+      cursor: not-allowed;
+    }
+    #status {
+      margin: 8px 0;
+      font-size: 13px;
+      color: #475569;
+    }
+    .result {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+    }
+    .url {
+      word-break: break-all;
+      font-size: 13px;
+      color: #0f172a;
+      text-decoration: none;
+    }
+    .url:hover { text-decoration: underline; }
+    .frame {
+      font-size: 12px;
+      color: #64748b;
+    }
+    .actions {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .pill {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>Video Extractor</h1>
+  <button id="scan">Scan Page</button>
+  <div id="status">Ready to scan the current page and its iframes.</div>
+  <div id="results"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
